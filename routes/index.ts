@@ -1,9 +1,13 @@
-import * as express from 'express';
+"use strict";
 
-var router = express.Router();
+import * as express from "express";
 
-router.get('/', (req, res, next) => {
- res.send(`request serverd: ${req.url}`);
-});
+module Route {
+  export class Index {
+    public index(req: express.Request, res: express.Response, next: express.NextFunction) {
+      res.json({});
+    }
+  }
+}
 
-export { router } ;
+export = Route;
